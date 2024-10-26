@@ -135,7 +135,8 @@ $o=New-Object -ComObject WScript.Shell
 #>
 
 function Play-WAV{
-$PlayWav=New-Object System.Media.SoundPlayer;$PlayWav.SoundLocation="$env:TMP\s.wav";$PlayWav.playsync()
+$PlayWav=New-Object System.Media.SoundPlayer
+$PlayWav.SoundLocation="$env:TMP\s.wav";$PlayWav.playsync()
 }
 
 #----------------------------------------------------------------------------------------------------
