@@ -26,14 +26,6 @@ $wav = "https://github.com/Ta0hit/FlipperZero/blob/main/RubberDucky-JumpScare/cr
 $w = -join($wav,"?dl=1")
 iwr $w -O $env:TMP\s.wav
 
-# Verify if the file exists and its size (indicates successful download)
-if (Test-Path $wavPath) {
-    $fileSize = (Get-Item $wavPath).Length
-    Write-Host "WAV file downloaded successfully. Size: $fileSize bytes"
-} else {
-    Write-Host "WAV file download failed."
-}
-
 #----------------------------------------------------------------------------------------------------
 
 <#
