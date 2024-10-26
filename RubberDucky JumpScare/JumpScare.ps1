@@ -22,10 +22,9 @@ iwr https://github.com/Ta0hit/FlipperZero/blob/main/RubberDucky%20JumpScare/jump
 # Download WAV file; replace link to $wav to add your own sound
 
 $wav = "https://github.com/Ta0hit/FlipperZero/blob/main/RubberDucky%20JumpScare/creepy_scream.wav?raw=true"
+
 $w = -join($wav,"?dl=1")
 iwr $w -O $env:TMP\s.wav
-
-
 
 #----------------------------------------------------------------------------------------------------
 
