@@ -1,4 +1,4 @@
-# Download Images
+<# Download Images #>
 
 ## Fakeout cute image
 $image =  "https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/cat.png"
@@ -128,6 +128,8 @@ function Play-WAV {
 
 #----------------------------------------------------------------------------------------------------
 
+<# This handles user volume #>
+
 # Check if computer is muted - it it is, unmute it
 $m = Get-WmiObject -Namespace root\cimv2 -Class Win32_SoundDevice
 if($m.Volume -eq 0) {
@@ -157,7 +159,7 @@ Play-WAV
 
 #----------------------------------------------------------------------------------------------------
 
-# This is to clean up and remove any evidence to prove you were there
+<# This is to clean up and remove any evidence to prove you were there #>
 
 # Delete contents of Temp folder 
 rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
