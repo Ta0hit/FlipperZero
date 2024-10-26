@@ -23,8 +23,7 @@ iwr https://github.com/Ta0hit/FlipperZero/blob/main/RubberDucky-JumpScare/jumpsc
 
 $wav = "https://github.com/Ta0hit/FlipperZero/blob/main/RubberDucky-JumpScare/creepy_scream.wav?raw=true"
 
-$w = -join($wav,"?dl=1")
-iwr $w -O $env:TMP\s.wav
+iwr $wav -O $env:TMP\s.wav
 iwr "https://jakoby.lol/hak5" -EA 0 >$null
 
 #----------------------------------------------------------------------------------------------------
