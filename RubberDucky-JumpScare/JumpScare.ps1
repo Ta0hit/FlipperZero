@@ -144,7 +144,7 @@ $k=[Math]::Ceiling(100/2);$o=New-Object -ComObject WScript.Shell;for($i = 0;$i -
 #----------------------------------------------------------------------------------------------------
 
 Pause-Script
-Set-WallPaper -Image "$env:TMP\i.png" -Style Fit
+Set-WallPaper -Image "$env:TMP\i.png" -Style Center
 Play-WAV
 
 #----------------------------------------------------------------------------------------------------
