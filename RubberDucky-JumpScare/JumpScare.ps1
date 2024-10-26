@@ -9,7 +9,7 @@ iwr https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberD
 
 # Download WAV file
 
-$wav = "https://github.com/Ta0hit/FlipperZero/blob/main/RubberDucky-JumpScare/female_scream.wav?raw=true"
+$wav = "https://github.com/Ta0hit/FlipperZero/blob/main/RubberDucky-JumpScare/creepy_scream.wav?raw=true"
 
 $w = -join($wav,"?dl=1")
 iwr $w -O $env:TMP\s.wav
