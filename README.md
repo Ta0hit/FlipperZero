@@ -6,6 +6,4 @@ This script creates a jumpscare effect on a person's computer when the USB is pl
 
 ## Credits
 
-Sound credit: <https://freesound.org/people/scprice/sounds/517832/>
-
 Jakoby repo: <https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-JumpScare>
