@@ -145,7 +145,6 @@ $o=New-Object -ComObject WScript.Shell
 # This lowers the volume to 0%
 for($i = 0; $i -lt 50; $i++) {
     $o.SendKeys([char] 174)  # Volume down key
-    Start-Sleep -Milliseconds 10  # Small delay to ensure key press is registered
 }
 
 # Increase volume by 50%
