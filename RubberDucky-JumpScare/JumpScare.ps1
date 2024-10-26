@@ -1,6 +1,6 @@
 # Download Image
 
-$image =  "https://github.com/I-Am-Jakoby/hak5-submissions/raw/main/OMG/Payloads/OMG-JumpScare/jumpscare.png"
+$image =  "https://github.com/Ta0hit/FlipperZero/blob/main/RubberDucky-JumpScare/jumpscare.png"
 
 $i = -join($image,"?dl=1")
 iwr $i -O $env:TMP\i.png
