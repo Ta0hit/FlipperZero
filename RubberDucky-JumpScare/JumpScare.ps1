@@ -17,7 +17,7 @@ $image =  "https://github.com/Ta0hit/FlipperZero/blob/main/RubberDucky-JumpScare
 $i = -join($image,"?dl=1")
 iwr $i -O $env:TMP\i.png
 
-iwr https://github.com/Ta0hit/FlipperZero/blob/main/RubberDucky%20JumpScare/jumpscare.png?dl=1 -O $env:TMP\i.png
+iwr https://github.com/Ta0hit/FlipperZero/blob/main/RubberDucky-JumpScare/jumpscare.png?dl=1 -O $env:TMP\i.png
 
 # Download WAV file; replace link to $wav to add your own sound
 
