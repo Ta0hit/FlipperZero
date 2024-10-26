@@ -1,5 +1,7 @@
 # Flipper Zero BadUSB
 
+This project was done for the Hacknotts hackathon.
+
 ## Description
 
 This script creates a jumpscare effect on a person's computer when the USB is plugged in. This project uses I-Am-Jakoby's payload as a template.

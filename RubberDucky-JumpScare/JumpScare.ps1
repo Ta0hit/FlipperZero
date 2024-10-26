@@ -1,6 +1,9 @@
 # Download Image
 
 ## Fakeout cute image
+$image =  "https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/cat.png"
+$c = -join($image,"?dl=1")
+iwr $c -O $env:TMP\c.png
 
 ## Jumpscare
 $image =  "https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/jumpscare.png"
@@ -141,7 +144,7 @@ $PlayWav=New-Object System.Media.SoundPlayer;$PlayWav.SoundLocation="$env:TMP\s.
 $k=[Math]::Ceiling(100/2);$o=New-Object -ComObject WScript.Shell;for($i = 0;$i -lt $k;$i++){$o.SendKeys([char] 175)}
 
 #----------------------------------------------------------------------------------------------------
-Set-WallPaper -Image "$env:TMP\cat.png" -Style Center
+Set-WallPaper -Image "$env:TMP\c.png" -Style Center
 Pause-Script
 Set-WallPaper -Image "$env:TMP\i.png" -Style Center
 Play-WAV
