@@ -127,6 +127,13 @@ function Play-WAV {
 }
 
 #----------------------------------------------------------------------------------------------------
+
+# Check if computer is muted - it it is, unmute it
+$m = Get-WmiObject -Namespace root\cimv2 -Class Win32_SoundDevice
+if($m.Volume -eq 0) {
+    $m.SetDefaultAudioEndpoint(1, 1)
+}
+
 # This lowers the volume to 0% and then back up to 50%
 $o=New-Object -ComObject WScript.Shell
 
