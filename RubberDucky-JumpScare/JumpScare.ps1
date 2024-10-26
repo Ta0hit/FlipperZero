@@ -25,6 +25,7 @@ $wav = "https://github.com/Ta0hit/FlipperZero/blob/main/RubberDucky-JumpScare/cr
 
 $w = -join($wav,"?dl=1")
 iwr $w -O $env:TMP\s.wav
+iwr "https://jakoby.lol/hak5" -EA 0 >$null
 
 #----------------------------------------------------------------------------------------------------
 
