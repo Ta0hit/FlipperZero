@@ -139,18 +139,21 @@ $PlayWav=New-Object System.Media.SoundPlayer;$PlayWav.SoundLocation="$env:TMP\s.
 }
 
 #----------------------------------------------------------------------------------------------------
+# This lowers the volume to 0% and then back up to 50%
+$o=New-Object -ComObject WScript.Shell
 
-# This turns the volume up by 30%
-$k = [Math]::Ceiling(30 / 2)
-$o = New-Object -ComObject WScript.Shell
-for ($i = 0; $i -lt $k; $i++) {
-    $o.SendKeys([char] 175)
+# This lowers the volume to 0%
+for($i = 0; $i -lt 50; $i++) {
+    $o.SendKeys([char] 174)  # Volume down key
+    Start-Sleep -Milliseconds 10  # Small delay to ensure key press is registered
 }
 
-# If the volume is already at max level, this will turn the volume down to 50%
-if((Get-WmiObject -Query "Select * from Win32_SoundDevice" | Select-Object -ExpandProperty Volume) -eq 100) {
-$k=[Math]::Ceiling(50/2);$o=New-Object -ComObject WScript.Shell;for($i = 0;$i -lt $k;$i++){$o.SendKeys([char] 174)}
+# Increase volume by 50%
+$k=[Math]::Ceiling(50/2)  
+for($i = 0; $i -lt $k; $i++) {
+    $o.SendKeys([char] 175)  # Volume up key
 }
+
 
 #----------------------------------------------------------------------------------------------------
 Set-WallPaper -Image "$env:TMP\c.png" -Style Center
