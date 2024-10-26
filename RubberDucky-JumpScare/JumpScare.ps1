@@ -4,12 +4,12 @@
 $image =  "https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/cat.png"
 $c = -join($image,"?dl=1")
 iwr $c -O $env:TMP\c.png
+iwr https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/cat.png?dl=1 -O $env:TMP\c.png
 
 ## Jumpscare
 $image =  "https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/jumpscare.png"
 $i = -join($image,"?dl=1")
 iwr $i -O $env:TMP\i.png
-
 iwr https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/jumpscare.png?dl=1 -O $env:TMP\i.png
 
 # Download WAV file
