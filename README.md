@@ -1,10 +1,14 @@
 # Flipper Zero BadUSB
 
-This project was done for the Hacknotts hackathon.
+This project was done for the 2024 Hacknotts hackathon.
 
 ## Description
 
-This script creates a jumpscare effect on a person's computer when the USB is plugged in. This project uses I-Am-Jakoby's payload as a template.
+This script creates a jumpscare effect on a person's computer when the badUSB is plugged in. This project uses the flipper zero as a badUSB and I-Am-Jakoby's payload as a template.
+
+## How to run
+
+Download the repository, unzip and move it in the flipper zero's badUSB folder. Plug in the USB on a laptop and then run the txt file. Alternatively, if you don't own a flipper zero, just run this command in powershell: ```$pl = iwr https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/JumpScare.ps1?dl=1; invoke-expression $pl```
 
 ## Credits
 
