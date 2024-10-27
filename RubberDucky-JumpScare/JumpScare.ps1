@@ -8,8 +8,8 @@ iwr https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberD
 
 ## Jumpscare - choose random image
 $images = @(
-    "https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/jumpscare.png?dl=1",
-    "https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/jumpscare2.png?dl=1"
+    "https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/Images/jumpscare.png?dl=1",
+    "https://raw.githubusercontent.com/Ta0hit/FlipperZero/refs/heads/main/RubberDucky-JumpScare/Images/jumpscare2.png?dl=1"
     )
 $random = Get-Random -Minimum 0 -Maximum $images.Count
 $i = -join($images[$random],"?dl=1")
